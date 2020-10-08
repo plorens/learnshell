@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function ZMIANA_TYPU {
+
+  typ=$1
+  
+  if [ -e pliki ]; then
+  
+    for f in pliki/*; do 
+      mv $f ${f%}.$typ
+      echo "$f ma teraz typ $typ"
+    done
+
+  fi 
+}  
+ 
+
+ZMIANA_TYPU log 
