@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -e pliki ]; then 
+  NUMER=1
+  while [ -e pliki/$NUMER ]; do 
+    echo "$NUMER" > pliki/$NUMER 
+    NUMER=$(($NUMER + 1))
+  done
+  echo "Koniec wpisywania"
+else 
+  echo "Brak katalogu pliki"
+fi
