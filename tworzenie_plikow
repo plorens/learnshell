@@ -1,14 +1,14 @@
 #!/bin/bash
 
 function STWORZ_PLIKI {
-
-  if [ ! -e /pliki ]; then
-    mkdir pliki
-  fi 
-    
   a=$1
-  ITER=1
   
+  if [ ! -e pliki ]; then
+    mkdir pliki
+  fi
+
+
+  ITER=1
   while [ $ITER -le $a ]; do
     touch pliki/$ITER
     echo "Stworzono plik nr $ITER"
