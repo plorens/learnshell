@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function STWORZ_PLIKI {
+  a=$1
+  ITER=1
+  while [ $ITER -le $a ]; do
+    touch $ITER
+    echo "Stworzono plik nr $ITER"
+    ITER=$(($ITER + 1))
+  done
+}
+
+STWORZ_PLIKI 100
